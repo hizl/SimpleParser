@@ -2,3 +2,4 @@ pom.xml
 SimpleParser.iml
 test
 .idea
+target

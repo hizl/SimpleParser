@@ -1,6 +1,6 @@
 package io;
 
-import util.WorkWithFile;
+import util.Worker;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class URLReader {
-    public void getConnection() throws IOException {
+public class Reader {
+    public void run() throws IOException {
         URL url = new URL("https://www.simbirsoft.com/");
         URLConnection getConnection = url.openConnection();
 
@@ -18,7 +18,7 @@ public class URLReader {
         //get Connection And Record Letter
         while ((inputLine = in.readLine()) != null) {
             
-            WorkWithFile.createLetterList(inputLine);
+            Worker.createLetterList(inputLine);
         }
         in.close();
 
